@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace Examination_program
+namespace WeatherService
 {
-    class Program
+    class WeatherData
     {
         static void Main(string[] args)
         {
-            
+            Console.WriteLine("Hello World!");
         }
     }
 }

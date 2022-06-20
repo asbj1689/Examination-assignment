@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Examination_program
+namespace Entities
 {
-    class Program
+    class Pitches
     {
         static void Main(string[] args)
         {
