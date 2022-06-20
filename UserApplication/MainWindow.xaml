@@ -8,6 +8,7 @@
         Title="MainWindow"
         Height="500"
         Width="800">
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition  Width="280" />
@@ -22,6 +23,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
+
                 <GroupBox>
                     <Grid>
                         <Grid.RowDefinitions>
@@ -34,6 +36,7 @@
                             <RowDefinition Height="40" />
                             <RowDefinition Height="40" />
                         </Grid.RowDefinitions>
+
                         <TextBlock Text="Name:"
                                    Grid.Row="0"
                                    VerticalAlignment="Center"
@@ -62,6 +65,7 @@
                                    Grid.Row="6"
                                    VerticalAlignment="Center"
                                    Margin="5" />
+
                         <TextBox Grid.Row="0"
                                  Width="175"
                                  HorizontalAlignment="Right"
@@ -101,25 +105,30 @@
                                    Grid.Row="7"
                                    Margin="5"
                                    VerticalAlignment="Center"
-                                   Text="Confirm"/>
+                                   Text="Confirm" />
                     </Grid>
                 </GroupBox>
+
             </Grid>
         </GroupBox>
+
         <GroupBox Grid.Column="1"
                   Header="Search and Edit"
                   Margin="5"
                   FontSize="15">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="185"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="185" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
+
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="400"/>
+                    <RowDefinition Height="400" />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <GroupBox Grid.Column="0" Grid.Row="0">
+
+                <GroupBox Grid.Column="0"
+                          Grid.Row="0">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="50" />
@@ -127,6 +136,7 @@
                             <RowDefinition  Height="50" />
                             <RowDefinition  Height="*" />
                         </Grid.RowDefinitions>
+
                         <TextBlock HorizontalAlignment="Left"
                                    Text="From:"
                                    Margin="5"
@@ -152,24 +162,28 @@
                                    TextWrapping="Wrap"
                                    VerticalAlignment="Center" />
                         <ListBox Grid.Row="3" />
+
                     </Grid>
                 </GroupBox>
-                <GroupBox Grid.Column="1" Grid.Row="0"
+
+                <GroupBox Grid.Column="1"
+                          Grid.Row="0"
                           Header="Bookings from camp"
                           FontSize="15">
-                    <Grid Margin="0">
+                    <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition  Height="*" />
                         </Grid.RowDefinitions>
                         <DataGrid Margin="0,5,0,0" />
                     </Grid>
                 </GroupBox>
-                <TextBlock  Grid.Row="1" 
-                            Grid.ColumnSpan="2" 
+
+                <TextBlock  Grid.Row="1"
+                            Grid.ColumnSpan="2"
                             Text="Edit"
                             HorizontalAlignment="Right"
                             Margin="8"
-                            FontSize="18"/>
+                            FontSize="18" />
             </Grid>
         </GroupBox>
     </Grid>
