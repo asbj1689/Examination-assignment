@@ -7,11 +7,12 @@ namespace WeatherService
     class WeatherData
     {
 
-
-            public string GetWeather()
+        static void Main(string[] args)
+        {
+            static string GetWeather()
             {
                 // URL to the API:
-                string url = "d95fb07d41dc626f61c7bc479460dd43";
+                string url = "https://api.openweathermap.org/data/2.5/forecast?id=2610613&appid=d95fb07d41dc626f61c7bc479460dd43";
 
                 // Create a web client:
                 WebClient client = new();
@@ -23,7 +24,7 @@ namespace WeatherService
                 Root rootData = JsonConvert.DeserializeObject<Root>(json);
 
                 // Get the specific temperature:
-                double temperature = rootData.list[0].main.temp;
+                double temperature = rootData.list[0].pain.temp;
 
                 // Get the specifik weather description:
                 string desc = rootData.list[0].weather[0].description;
@@ -34,7 +35,7 @@ namespace WeatherService
                 // Return the weather:
                 return $"{desc}, {temperature - 273.15:f1} °C";
             }
-        
+        }
 
         // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
         public class City
@@ -63,7 +64,7 @@ namespace WeatherService
         public class List
         {
             public int dt { get; set; }
-            public Main main { get; set; }
+            public Pain pain { get; set; }
             public List<Weather> weather { get; set; }
             public Clouds clouds { get; set; }
             public Wind wind { get; set; }
@@ -74,7 +75,7 @@ namespace WeatherService
             public Rain rain { get; set; }
         }
 
-        public class Main
+        public class Pain
         {
             public double temp { get; set; }
             public double feels_like { get; set; }
@@ -109,7 +110,7 @@ namespace WeatherService
         public class Weather
         {
             public int id { get; set; }
-            public string main { get; set; }
+            public string pain { get; set; }
             public string description { get; set; }
             public string icon { get; set; }
         }
